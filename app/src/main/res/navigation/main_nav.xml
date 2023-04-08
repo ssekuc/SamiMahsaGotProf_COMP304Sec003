@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/landmarkTypeFragment">
+
+    <fragment
+        android:id="@+id/landmarkTypeFragment"
+        android:name="com.example.SamiMahsaGotProf_COMP304Sec003.view.LandmarkTypeFragment"
+        android:label="LandmarkTypeFragment"
+        tools:layout="@layout/fragment_landmark_types">
+        <action
+            android:id="@+id/action_landmarkTypeFragment_to_landmarksFragment"
+            app:destination="@id/landmarksFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landmarksFragment"
+        android:name="com.example.SamiMahsaGotProf_COMP304Sec003.view.LandmarksFragment"
+        android:label="LandmarksFragment"
+        tools:layout="@layout/fragment_landmarks">
+        <action
+            android:id="@+id/action_landmarksFragment_to_landmarkDetailFragment"
+            app:destination="@id/landmarkDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/landmarkDetailFragment"
+        android:name="com.example.SamiMahsaGotProf_COMP304Sec003.view.LandmarkDetailFragment"
+        android:label="LandmarkDetailFragment"
+        tools:layout="@layout/fragment_landmark_detail" />
+</navigation>
